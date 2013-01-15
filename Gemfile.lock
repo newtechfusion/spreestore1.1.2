@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/pronix/spree-multi-currency.git
+  revision: 2f56e04f485be55840fd73e8e168fd60e96813e4
+  specs:
+    spree_multi_currency (1.0.3)
+      json (>= 1.5.1)
+      money (>= 3.6.1)
+      nokogiri (>= 1.4.4)
+      spree_core (>= 1.0.0)
+
+GIT
   remote: git@github.com:jipiboily/spree_multi_lingual.git
   revision: 1b75572b8c07bd83bbb0be630e33cfbce9d15df5
   specs:
@@ -244,6 +254,7 @@ DEPENDENCIES
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   spree (= 1.1.2)
+  spree_multi_currency!
   spree_multi_lingual!
   sqlite3
   uglifier (>= 1.0.3)

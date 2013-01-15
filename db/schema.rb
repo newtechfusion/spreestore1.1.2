@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114121260) do
+ActiveRecord::Schema.define(:version => 20130115104146) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -124,6 +124,25 @@ ActiveRecord::Schema.define(:version => 20130114121260) do
     t.datetime "updated_at",                  :null => false
     t.string   "gateway_customer_profile_id"
     t.string   "gateway_payment_profile_id"
+  end
+
+  create_table "spree_currencies", :force => true do |t|
+    t.string   "num_code",                      :null => false
+    t.string   "char_code",                     :null => false
+    t.string   "name",                          :null => false
+    t.boolean  "basic",      :default => false
+    t.string   "locale"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "spree_currency_converters", :force => true do |t|
+    t.integer  "currency_id",                  :null => false
+    t.datetime "date_req",                     :null => false
+    t.float    "nominal",     :default => 1.0, :null => false
+    t.float    "value",                        :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "spree_gateways", :force => true do |t|
