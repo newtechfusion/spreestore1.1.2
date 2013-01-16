@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem 'spree','1.1.2'
 
-gem "spree_multi_lingual", :git => "git@github.com:jipiboily/spree_multi_lingual.git"
+gem 'spree_multi_lingual', :git => "git@github.com:jipiboily/spree_multi_lingual.git"
+gem 'globalize3'
 
 gem "spree_multi_currency", :git => "git://github.com/pronix/spree-multi-currency.git"

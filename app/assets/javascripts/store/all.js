@@ -10,6 +10,6 @@
 //= require store/spree_core
 //= require store/spree_auth
 //= require store/spree_promo
-
-//= require_tree .
 //= require store/spree_multi_lingual
+//= require_tree .
+
