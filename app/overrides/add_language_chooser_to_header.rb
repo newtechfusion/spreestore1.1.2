@@ -5,7 +5,7 @@
 #                      :text => "ddddddddddddd"
 # )
 Deface::Override.new(:virtual_path  => "spree/layouts/spree_application",
-                     :insert_before => "[data-hook='body']",
+                     :insert_after => "#logo",
                      :partial => "spree/shared/language_chooser",
                      :name          => "english_locale"
                      )

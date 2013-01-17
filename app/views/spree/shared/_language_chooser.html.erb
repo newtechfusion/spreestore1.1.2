@@ -1,9 +1,6 @@
-<div id="language_chooser">
-  Choose Language:<br/>
-  <%= link_to "ENGLISH", :controller=>params[:controller],:action=>params[:action],:id=>params[:id],:locale=>"en",:currency=>"USD"%>
-  <%= link_to "JAPANESE", :controller=>params[:controller],:action=>params[:action],:id=>params[:id],:locale=>"ja",:currency=>"JPY"%>
+<div id="language_chooser" style="padding-left:71%;">
+  Choose Language:
+ <b> <%= link_to "ENGLISH" , :controller=>params[:controller],:action=>params[:action],:id=>params[:id],:locale=>"en",:currency=>"USD"%> <%=image_tag("en.png", :border => 0)%><b>/</b>
+  <%= link_to  "JAPANESE", :controller=>params[:controller],:action=>params[:action],:id=>params[:id],:locale=>"ja",:currency=>"JPY" %><%=image_tag("ja.png", :border => 0)%></b>
 </div>
 
-  <%#=  session[:currency_id]= nil %>
-   <%#=    %>
-</div>
