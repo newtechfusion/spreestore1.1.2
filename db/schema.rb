@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116055144) do
+ActiveRecord::Schema.define(:version => 20130117072306) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -433,6 +433,17 @@ ActiveRecord::Schema.define(:version => 20130116055144) do
     t.integer "prototype_id"
     t.integer "property_id"
   end
+
+  create_table "spree_property_translations", :force => true do |t|
+    t.integer  "spree_property_id"
+    t.string   "locale"
+    t.string   "presentation"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "spree_property_translations", ["locale"], :name => "index_spree_property_translations_on_locale"
+  add_index "spree_property_translations", ["spree_property_id"], :name => "index_18d7a40517b2c63a27dd88e8171b51b7c1803614"
 
   create_table "spree_prototypes", :force => true do |t|
     t.string   "name"
